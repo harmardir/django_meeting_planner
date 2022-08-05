@@ -1,21 +1,14 @@
-{% load static %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome !</title>
-    <link rel="stylesheet" href="{% static 'website/style.css' %}">
-</head>
-<body>
-    <h1>Welcome to the Meeting Planner!</h1>
+ {%extends "base.html" %}
+ 
+ {% block title %}Welcome{% endblock %}
+
+ {% block content %}
+
+    <h1>Welcome to the Meeting Planner App!</h1>
 
     <p>
         This is the a demo application for a  <em>Django Project</em>
     </p>
-
-    <img src="{% static 'website/calendar.png' %}">
 
     <h2>Meetings</h2>
 
@@ -29,14 +22,8 @@
         </li>
 
         {% endfor %}
-
-
-
     </ul>
 
     <a href="{% url 'rooms' %}">Rooms List</a>
 
-
-
-</body>
-</html>
+{% endblock %}
