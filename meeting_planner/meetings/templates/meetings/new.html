@@ -6,12 +6,14 @@
 
     <h1>Plan a new meeting</h1>
 
-    <form>
+    <form method="post">
         <table>
 
             {{form}}
 
         </table>
+        {% csrf_token  path('rooms', views.rooms_list, name='rooms'),%}
+        <button type="submit">Create</button>
     </form>
     
 {% endblock %}
